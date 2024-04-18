@@ -34,17 +34,12 @@
     <link href="http://example.com/2024/04/17/mylove/"/>
     <id>http://example.com/2024/04/17/mylove/</id>
     <published>2024-04-17T13:50:44.000Z</published>
-    <updated>2024-04-18T09:16:48.674Z</updated>
+    <updated>2024-04-18T09:17:44.944Z</updated>
     
-    <content type="html"><![CDATA[<p>password: iloveren<br>message: 请输入密码<br><img src="/2024/04/17/mylove/rainy.jpg"></p><p>我喜欢任禹然！！！</p>]]></content>
+    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="0b592bf605ec6d3f57b23950d0cd0cab7733482595f4a67494b598ce35b58b15">5b854dcf7cbe0856463b87a4a395776f73d237a1da79d8dfed6d9ce1a2caeee00bf4be30a8a0fa3c00c9ddf85732f67a77ef653a9558559334843923a0284ed143ef222e3c8e8365132029b68431b759cc801840c55c72010c0bc4605d4b3ce0754b69b2d2315ad18b756a763bf00df5</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入密码</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;password: iloveren&lt;br&gt;message: 请输入密码&lt;br&gt;&lt;img src=&quot;/2024/04/17/mylove/rainy.jpg&quot;&gt;&lt;/p&gt;
-&lt;p&gt;我喜欢任禹然！！！&lt;/p&gt;
-</summary>
-      
+    <summary type="html">Here&#39;s something encrypted, password is required to continue reading.</summary>
     
     
     
