@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-04-26T01:13:31.408Z</updated>
+  <updated>2024-05-12T07:06:49.693Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>5.11</title>
+    <link href="http://example.com/2024/05/11/5-11/"/>
+    <id>http://example.com/2024/05/11/5-11/</id>
+    <published>2024-05-11T00:14:18.000Z</published>
+    <updated>2024-05-12T07:06:49.693Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天是5.11，现在在上早八的机器学习，回顾了自己的大二，就像学这个机器学习一样，遥遥无期，触不可及。。。<br>有那么多东西不会，一点都不会，ICS2，算法，最优化，大部分时间还是没听课，唉，还有中午的英语课，即将要考的英语四级<br>这样的日子什么时候能到头啊，鼠标没电，听不懂，老师讲的没兴趣，这到底是我的问题吗，真该死。<br>母亲节要到了，520要到了，这个2024年好黑暗，我为妈妈和小任带来了什么呀。。该死<br>加油吧，至少，先把作业给完成。<br>感冒应该也快要好了，真的难受，<br>难受，难受，该死。。。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;今天是5.11，现在在上早八的机器学习，回顾了自己的大二，就像学这个机器学习一样，遥遥无期，触不可及。。。&lt;br&gt;有那么多东西不会，一点都不会，ICS2，算法，最优化，大部分时间还是没听课，唉，还有中午的英语课，即将要考的英语四级&lt;br&gt;这样的日子什么时候能到头啊，鼠标没电</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>2024/4/26</title>
