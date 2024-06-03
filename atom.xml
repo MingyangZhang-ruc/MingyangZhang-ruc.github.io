@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-05-13T21:59:33.445Z</updated>
+  <updated>2024-06-03T16:05:36.573Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>图论</title>
+    <link href="http://example.com/2024/06/04/%E5%9B%BE%E8%AE%BA/"/>
+    <id>http://example.com/2024/06/04/%E5%9B%BE%E8%AE%BA/</id>
+    <published>2024-06-03T16:04:53.000Z</published>
+    <updated>2024-06-03T16:05:36.573Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h1><h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><ul><li>无向图，有向图</li><li>图的路径，圈，环</li><li>正则图：比如3-正则图是指每个顶点的度数都是3</li><li>完全图$$K_n$$：比如$$K_5$$是指5的顶点的图，每个顶点两两相连,容易知道$$K_5$$是4-正则图</li><li>图的匹配：图中不相邻的边的集合，比如下图中都是图的匹配</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;图论&quot;&gt;&lt;a href=&quot;#图论&quot; class=&quot;headerlink&quot; title=&quot;图论&quot;&gt;&lt;/a&gt;图论&lt;/h1&gt;&lt;h4 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h4&gt;&lt;ul&gt;
+&lt;</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>5.13</title>
