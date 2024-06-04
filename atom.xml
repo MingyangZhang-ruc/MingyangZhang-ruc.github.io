@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-06-03T16:05:36.573Z</updated>
+  <updated>2024-06-04T14:53:34.777Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,15 +21,17 @@
     <link href="http://example.com/2024/06/04/%E5%9B%BE%E8%AE%BA/"/>
     <id>http://example.com/2024/06/04/%E5%9B%BE%E8%AE%BA/</id>
     <published>2024-06-03T16:04:53.000Z</published>
-    <updated>2024-06-03T16:05:36.573Z</updated>
+    <updated>2024-06-04T14:53:34.777Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h1><h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><ul><li>无向图，有向图</li><li>图的路径，圈，环</li><li>正则图：比如3-正则图是指每个顶点的度数都是3</li><li>完全图$$K_n$$：比如$$K_5$$是指5的顶点的图，每个顶点两两相连,容易知道$$K_5$$是4-正则图</li><li>图的匹配：图中不相邻的边的集合，比如下图中都是图的匹配</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="图论"><a class="markdownIt-Anchor" href="#图论"></a> 图论</h1><h4 id="概念"><a class="markdownIt-Anchor" href="#概念"></a> 概念</h4><ul><li>无向图，有向图\Alpha</li><li>图的路径，圈，环</li></ul><p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>C</mi><mi>O</mi><mi>P</mi><mo>=</mo><mfrac><mrow><msub><mi>Q</mi><mrow><mi>C</mi><mi>o</mi><mi>o</mi><mi>l</mi><mi>i</mi><mi>n</mi><mi>g</mi><mi>C</mi><mi>i</mi><mi>r</mi><mi>c</mi><mi>u</mi><mi>i</mi><mi>t</mi><mi>s</mi></mrow></msub></mrow><mrow><msub><mi>P</mi><mrow><mi>C</mi><mi>o</mi><mi>o</mi><mi>l</mi><mi>i</mi><mi>n</mi><mi>g</mi><mi>C</mi><mi>i</mi><mi>r</mi><mi>c</mi><mi>u</mi><mi>i</mi><mi>t</mi><mi>s</mi></mrow></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">COP = \frac{Q_{CoolingCircuits}}{P_{CoolingCircuits}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.36033em;"></span><span class="strut bottom" style="height:2.332438em;vertical-align:-0.972108em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mrel">=</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.6859999999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.13889em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="mord mathit">o</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">i</span><span class="mord mathit">n</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="mord mathit">i</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">c</span><span class="mord mathit">u</span><span class="mord mathit">i</span><span class="mord mathit">t</span><span class="mord mathit">s</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord"><span class="mord mathit">Q</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="mord mathit">o</span><span class="mord mathit">o</span><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="mord mathit">i</span><span class="mord mathit">n</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="mord mathit">i</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">c</span><span class="mord mathit">u</span><span class="mord mathit">i</span><span class="mord mathit">t</span><span class="mord mathit">s</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span></span></p><ul><li>正则图：比如3-正则图是指每个顶点的度数都是3</li><li>完全图Kn：比如<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>K</mi><mn>5</mn></msub></mrow><annotation encoding="application/x-tex">K_5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.07153em;">K</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07153em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">5</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>是指5的顶点的图，每个顶点两两相连,容易知道K5是4-正则图</li><li>二部图：分为两个点集，点集之间两两相连，点集内部不相连（如下图所示），可以记作 G &lt;V1,V2,E&gt;</li><li>完全二部图：连满了的二部图（如下图所示）</li><li>对偶图：</li><li>平面图：边不会相交的图（如下图所示，左图看起来有边相交，但实际上可以变为右边的平面图），K5和K3，3就不是平面图（但删掉一条边就是）<br><img src="/2024/06/04/%E5%9B%BE%E8%AE%BA/%E5%B9%B3%E9%9D%A2%E5%9B%BE.png" alt></li><li>图的匹配：图中不相邻的边的集合，比如下图中绿色边的集合就是图的匹配<br><img src="/2024/06/04/%E5%9B%BE%E8%AE%BA/%E5%9B%BE%E7%9A%84%E5%8C%B9%E9%85%8D.png" alt></li><li>图的最大匹配：再加上一条边就不能保证是匹配了（会让新加的边与一条旧边相邻）</li><li>图的完美匹配：覆盖了所有顶点的匹配（比如上图中红色边的集合）</li><li>Euler图（欧拉图）：能一笔画的图，要求经过所有的边（比如手机的解锁图案），但可以重复的经过某些点</li><li>Hamilton图（哈密顿图）：</li></ul>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;图论&quot;&gt;&lt;a href=&quot;#图论&quot; class=&quot;headerlink&quot; title=&quot;图论&quot;&gt;&lt;/a&gt;图论&lt;/h1&gt;&lt;h4 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h4&gt;&lt;ul&gt;
-&lt;</summary>
+    <summary type="html">&lt;h1 id=&quot;图论&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#图论&quot;&gt;&lt;/a&gt; 图论&lt;/h1&gt;
+&lt;h4 id=&quot;概念&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#概念&quot;&gt;&lt;/a&gt; 概念&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;无</summary>
       
     
     
@@ -42,7 +44,7 @@
     <link href="http://example.com/2024/05/13/5-13/"/>
     <id>http://example.com/2024/05/13/5-13/</id>
     <published>2024-05-13T14:28:16.000Z</published>
-    <updated>2024-05-13T21:59:33.445Z</updated>
+    <updated>2024-06-04T13:59:02.977Z</updated>
     
     <content type="html"><![CDATA[<p>5月13日，又是熬夜但什么都没有干的一天，ICS2像是在录课，去了，但都在打瞌睡，感冒似乎彻底好了，早上起的很早，帮小任拿了她<br>丢在图书馆的雨伞，晚上和小任在立德自习，没学习什么，把上次错误卸载的Office下载了回来，我就是爱折腾，和小任打了一下switch上的拳皇，<br>晚上送小任回去，告诉了她我520要送她的礼物（其中的两个），也知道了她要送我洞洞鞋，嘿嘿好期待，晚上和妈妈打了视频，难得在打麻将哈哈哈。520要到了，<br>要好好为小任准备一个惊喜啊！！！</p>]]></content>
     
@@ -62,7 +64,7 @@
     <link href="http://example.com/2024/05/11/5-11/"/>
     <id>http://example.com/2024/05/11/5-11/</id>
     <published>2024-05-11T00:14:18.000Z</published>
-    <updated>2024-05-12T07:06:49.693Z</updated>
+    <updated>2024-06-04T13:59:13.987Z</updated>
     
     <content type="html"><![CDATA[<p>今天是5.11，现在在上早八的机器学习，回顾了自己的大二，就像学这个机器学习一样，遥遥无期，触不可及。。。<br>有那么多东西不会，一点都不会，ICS2，算法，最优化，大部分时间还是没听课，唉，还有中午的英语课，即将要考的英语四级<br>这样的日子什么时候能到头啊，鼠标没电，听不懂，老师讲的没兴趣，这到底是我的问题吗，真该死。<br>母亲节要到了，520要到了，这个2024年好黑暗，我为妈妈和小任带来了什么呀。。该死<br>加油吧，至少，先把作业给完成。<br>感冒应该也快要好了，真的难受，<br>难受，难受，该死。。。</p>]]></content>
     
@@ -82,7 +84,7 @@
     <link href="http://example.com/2024/04/26/2024-4-26/"/>
     <id>http://example.com/2024/04/26/2024-4-26/</id>
     <published>2024-04-26T01:13:31.000Z</published>
-    <updated>2024-04-26T01:13:31.408Z</updated>
+    <updated>2024-06-04T13:59:01.317Z</updated>
     
     
     
@@ -95,7 +97,7 @@
     <link href="http://example.com/2024/04/18/%E5%B0%8F%E4%BB%BB%E7%9A%84%E5%B0%8F%E8%AF%B4/"/>
     <id>http://example.com/2024/04/18/%E5%B0%8F%E4%BB%BB%E7%9A%84%E5%B0%8F%E8%AF%B4/</id>
     <published>2024-04-18T12:19:34.000Z</published>
-    <updated>2024-04-18T12:20:05.161Z</updated>
+    <updated>2024-06-04T13:58:54.914Z</updated>
     
     <content type="html"><![CDATA[<p>爬起来把感冒药吃了，幸好去年从家里带过来了一些，还有一些常用的发烧药、腹泻药之类的，它们都被我埋在抽屉深处，我原本以为永远也用不上。<br>不知道怎么又开始想家！想念2008年的家。我细细地回忆每一处装潢。在回忆中，那个家出乎意料的大。大大的阳台，椅背上搭着军大衣和棉被的躺椅，宽敞的书桌，灰色花纹的沙发，我仿佛还可以闻到沙发的味道，旧旧的味道。电视柜里堆着各种各样的动画片碟片，还有脏脏的各种充电线，可能是照相机的充电线，也可能是台灯的充电线。我的小床是个靠墙的榻榻米，墙面做了蓝底色，动画花纹的海绵软包，我经常躺在床上，把脚搭在上面，欣赏自己的脚丫。我曾经对妈妈说，我觉得自己的脚丫长得很标致，就像电视广告里的一样。<br>小学三年级之后，我有了一个自己的小衣柜，我在里面贴上标签，写着“这里放袜子”“这里放裤子”，衣柜下面有很多小盒子小本子。我以前会用鞋盒子给小洋娃娃做家，这里是床那里是桌子之类的。<br>洗漱的池子上放着我、妈妈、爸爸的漱口杯，花纹都是大大的笑脸。有一次停电，妈妈在窗台上放了一支蜡烛，烧掉了一小块纱窗，后来也没修，贴了一块胶布。大大的镜子对面有一根杆子，用来挂毛巾，我以前长得矮，都得踩凳子才能挂上。<br>我家住在义峰山公园旁边，洗漱间是听广场舞音乐最清楚的地方。小学的时候我都严格遵守八点半之前睡觉，每天都伴着音乐入睡，什么时兴就听什么，睡得也很香。我还记得小学有一次写作文，我的题目是“我家的后花园”，写的就是义峰山，隔壁的讨厌男生看见我的题目，皱着眉头问我，你家还有后花园？<br>妈妈爸爸的房间有大大的床，我每周六早上都会跑到他们床上，钻到他们中间睡回笼觉。小学六年级，妈妈流产了一次，我坐在床边问妈妈，怎么回事？怎么就摔跤了？爸爸叫我别问了一边去。但是我是真想知道怎么搞的，因为那天我一起床跑到他们房间，妈妈就端着一杯红糖水坐在床头哭了。我也很喜欢把他们的床当成蹦蹦床，对着窗户蹦蹦蹦，对着空调吹冷风。<br>他们房间还放了一张电脑桌，我爸有时候会在电脑上玩消消乐，或者找不同，我坐在床头就能看出来要点哪里，他们就会惊叹，崽崽眼睛真好！真聪明！<br>爸妈房间连着阳台，我在阳台的书桌上画画练字写作业。小时候我爸妈吵架，我画过一幅画，左边是爸爸妈妈美好的婚礼，妈妈手里还拿着我（当时我的画技还画不出抱着，以及我也不知道婚礼上为什么会有我）右边就是婚后他们吵架，还有大大的文字框，里面写着我经常听到他们吵架的内容。婚姻是多么可怕！后来我们又把那幅画翻出来，我和妈妈笑得不行。早熟的小女孩～<br>厨房也很好。厨房的冰箱里有我用来招待好朋友的可爱多。我们的餐桌垫着蓝白格子的桌布，上面压着一大块玻璃。有次我学着爸妈的样子用筷子把桌上的残渣往碗里扫，结果弄脏了桌布，被骂了一顿，自作聪明的小女孩～<br>厨房连着晒衣服的小阳台，小阳台和我的房间隔着一扇窗户，有一次爸爸在小阳台抽烟发现我趴在床上看书，告诉了妈妈。当时我以为天都要塌了！趴着看书，对眼睛多不好，是多么严重的一个错误！<br>好多我都已经记不清了，比如说我不记得进门的鞋柜上面放了些什么，不记得电视柜的玻璃门具体长什么样子。但是我写着写着想起来，鞋柜有一个小抽屉放着各种钥匙，电视柜里有一个笔筒里面放着各种面值的硬币，甚至还有一分钱的纸笔。<br>我真的很害怕我会把那里忘记，那里有我完整的童年。如果我不记得，爸妈也不记得，就没人会记得了，我也不知道还有没有照片留存。2018（？）年公园要扩建，那里就拆迁了，先是变成废墟，后来就变成新的公园了。<br>然后我们从山边搬到了河边，新家仍然有人跳广场舞，但是更多的是装修。新家有两个卫生间，甚至有一间客房。后来弟弟出生了，外婆来照顾他，我和外婆不太合得来，我要求她进我的房间要敲门。我们的关系到现在都很尴尬。<br>我们家只在河边住了两年，就搬到了现在的家。我和弟弟都远离了我们出生的地方。<br>我很想家！我想念我小小的床！想念院子里的朋友！想念可爱多和旺仔牛奶！我想念那个安静的小女孩！<br>现在我要睡觉了，晚安！<br>                                        于23年12月23日深夜</p>]]></content>
     
@@ -115,7 +117,7 @@
     <link href="http://example.com/2024/04/18/%E6%81%8B%E7%88%B1%E6%97%A5%E8%AE%B0/"/>
     <id>http://example.com/2024/04/18/%E6%81%8B%E7%88%B1%E6%97%A5%E8%AE%B0/</id>
     <published>2024-04-18T09:39:48.000Z</published>
-    <updated>2024-04-18T12:20:03.577Z</updated>
+    <updated>2024-06-04T13:58:59.521Z</updated>
     
     <content type="html"><![CDATA[<p>小任的小小心事<br> <span id="more"></span></p>]]></content>
     
@@ -132,7 +134,7 @@
     <link href="http://example.com/2024/04/18/1day/"/>
     <id>http://example.com/2024/04/18/1day/</id>
     <published>2024-04-18T08:56:21.000Z</published>
-    <updated>2024-04-18T08:56:21.808Z</updated>
+    <updated>2024-06-04T13:59:16.102Z</updated>
     
     
     
@@ -145,7 +147,7 @@
     <link href="http://example.com/2024/04/17/mylove/"/>
     <id>http://example.com/2024/04/17/mylove/</id>
     <published>2024-04-17T13:50:44.000Z</published>
-    <updated>2024-04-18T09:17:44.944Z</updated>
+    <updated>2024-06-04T13:58:52.766Z</updated>
     
     <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="0b592bf605ec6d3f57b23950d0cd0cab7733482595f4a67494b598ce35b58b15">5b854dcf7cbe0856463b87a4a395776f73d237a1da79d8dfed6d9ce1a2caeee00bf4be30a8a0fa3c00c9ddf85732f67a77ef653a9558559334843923a0284ed143ef222e3c8e8365132029b68431b759cc801840c55c72010c0bc4605d4b3ce0754b69b2d2315ad18b756a763bf00df5</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入密码</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
     
