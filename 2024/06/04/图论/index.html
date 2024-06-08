@@ -18,20 +18,23 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="图论  概念  无向图，有向图\Alpha 图的路径，圈，环 正则图：比如3-正则图是指每个顶点的度数都是3 完全图KnK_nK​n​​：比如K5K_5K​5​​是指5的顶点的图，每个顶点两两相连,容易知道K5K_5K​5​​是4-正则图 二部图：分为两个点集，点集之间两两相连，点集内部不相连（如下图所示），可以记作 G &lt;V1,V2,E&gt; 完全二部图：连满了的二部图（如下图所示）">
+  <meta name="description" content="[TOC]  图论  概念  无向图，有向图 图的路径，圈，环 正则图：比如3-正则图是指每个顶点的度数都是3 完全图 KnK_nK​n​​ ：比如 K5K_5K​5​​ 是指5的顶点的图，每个顶点两两相连,容易知道K5K_5K​5​​是4-正则图 二部图：分为两个点集，点集之间两两相连，点集内部不相连（如下图所示），可以记作 G &lt;V1,V2,E&gt; 完全二部图：连满了的二部图（如下图">
 <meta property="og:type" content="article">
 <meta property="og:title" content="图论">
 <meta property="og:url" content="http://example.com/2024/06/04/%E5%9B%BE%E8%AE%BA/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="图论  概念  无向图，有向图\Alpha 图的路径，圈，环 正则图：比如3-正则图是指每个顶点的度数都是3 完全图KnK_nK​n​​：比如K5K_5K​5​​是指5的顶点的图，每个顶点两两相连,容易知道K5K_5K​5​​是4-正则图 二部图：分为两个点集，点集之间两两相连，点集内部不相连（如下图所示），可以记作 G &lt;V1,V2,E&gt; 完全二部图：连满了的二部图（如下图所示）">
+<meta property="og:description" content="[TOC]  图论  概念  无向图，有向图 图的路径，圈，环 正则图：比如3-正则图是指每个顶点的度数都是3 完全图 KnK_nK​n​​ ：比如 K5K_5K​5​​ 是指5的顶点的图，每个顶点两两相连,容易知道K5K_5K​5​​是4-正则图 二部图：分为两个点集，点集之间两两相连，点集内部不相连（如下图所示），可以记作 G &lt;V1,V2,E&gt; 完全二部图：连满了的二部图（如下图">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2024/06/04/%E5%9B%BE%E8%AE%BA/%E5%B9%B3%E9%9D%A2%E5%9B%BE.png">
+<meta property="og:image" content="http://example.com/2024/06/04/%E5%9B%BE%E8%AE%BA/%E5%B9%B3%E9%9D%A2%E5%9B%BE%E7%9A%84%E9%9D%A2.png">
+<meta property="og:image" content="http://example.com/2024/06/04/%E5%9B%BE%E8%AE%BA/%E9%9D%A2%E7%9A%84%E6%AC%A1%E6%95%B0.png">
 <meta property="og:image" content="http://example.com/2024/06/04/%E5%9B%BE%E8%AE%BA/%E5%9B%BE%E7%9A%84%E5%8C%B9%E9%85%8D.png">
+<meta property="og:image" content="http://example.com/2024/06/04/%E5%9B%BE%E8%AE%BA/%E9%97%AE%E9%A2%981.png">
 <meta property="article:published_time" content="2024-06-03T16:04:53.000Z">
-<meta property="article:modified_time" content="2024-06-04T15:13:03.098Z">
+<meta property="article:modified_time" content="2024-06-04T17:30:45.281Z">
 <meta property="article:author" content="rainyyyysheeeep">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2024/06/04/%E5%9B%BE%E8%AE%BA/%E5%B9%B3%E9%9D%A2%E5%9B%BE.png">
@@ -177,10 +180,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2024-06-04 00:04:53 / 修改时间：23:13:03" itemprop="dateCreated datePublished" datetime="2024-06-04T00:04:53+08:00">2024-06-04</time>
+              <time title="创建时间：2024-06-04 00:04:53" itemprop="dateCreated datePublished" datetime="2024-06-04T00:04:53+08:00">2024-06-04</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-06-05 01:30:45" itemprop="dateModified" datetime="2024-06-05T01:30:45+08:00">2024-06-05</time>
+              </span>
 
           
 
@@ -193,24 +202,45 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="图论"><a class="markdownIt-Anchor" href="#图论"></a> 图论</h1>
-<h4 id="概念"><a class="markdownIt-Anchor" href="#概念"></a> 概念</h4>
+        <p>[TOC]</p>
+<h1 id="图论"><a class="markdownIt-Anchor" href="#图论"></a> 图论</h1>
+<h2 id="概念"><a class="markdownIt-Anchor" href="#概念"></a> 概念</h2>
 <ul>
-<li>无向图，有向图\Alpha</li>
+<li>无向图，有向图</li>
 <li>图的路径，圈，环</li>
 <li>正则图：比如3-正则图是指每个顶点的度数都是3</li>
-<li>完全图<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>K</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">K_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.07153em;">K</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07153em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>：比如<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>K</mi><mn>5</mn></msub></mrow><annotation encoding="application/x-tex">K_5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.07153em;">K</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07153em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">5</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>是指5的顶点的图，每个顶点两两相连,容易知道<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>K</mi><mn>5</mn></msub></mrow><annotation encoding="application/x-tex">K_5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.07153em;">K</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07153em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">5</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>是4-正则图</li>
+<li>完全图 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>K</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">K_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.07153em;">K</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07153em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> ：比如 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>K</mi><mn>5</mn></msub></mrow><annotation encoding="application/x-tex">K_5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.07153em;">K</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07153em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">5</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> 是指5的顶点的图，每个顶点两两相连,容易知道<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>K</mi><mn>5</mn></msub></mrow><annotation encoding="application/x-tex">K_5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.07153em;">K</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07153em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">5</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>是4-正则图</li>
 <li>二部图：分为两个点集，点集之间两两相连，点集内部不相连（如下图所示），可以记作 G &lt;V1,V2,E&gt;</li>
 <li>完全二部图：连满了的二部图（如下图所示）</li>
 <li>对偶图：</li>
-<li>平面图：边不会相交的图（如下图所示，左图看起来有边相交，但实际上可以变为右边的平面图），<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>K</mi><mn>5</mn></msub></mrow><annotation encoding="application/x-tex">K_5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.07153em;">K</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07153em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">5</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>和 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>K</mi><mrow><mn>3</mn><mo separator="true">,</mo><mn>3</mn></mrow></msub></mrow><annotation encoding="application/x-tex">K_{3,3}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.07153em;">K</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07153em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathrm">3</span><span class="mpunct">,</span><span class="mord mathrm">3</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> 就不是平面图（但删掉一条边就是）<br>
+<li>平面图：边不会相交的图（如下图所示，左图看起来有边相交，但实际上可以变为右边的平面图）， <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>K</mi><mn>5</mn></msub></mrow><annotation encoding="application/x-tex">K_5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.07153em;">K</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07153em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">5</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>K</mi><mrow><mn>3</mn><mo separator="true">,</mo><mn>3</mn></mrow></msub></mrow><annotation encoding="application/x-tex">K_{3,3}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.07153em;">K</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.07153em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathrm">3</span><span class="mpunct">,</span><span class="mord mathrm">3</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> 就不是平面图（但删掉一条边就是）<br>
 <img src="/2024/06/04/%E5%9B%BE%E8%AE%BA/%E5%B9%B3%E9%9D%A2%E5%9B%BE.png" alt></li>
+<li>平面图的面：用集合 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="bold">Ψ</mi></mrow></mrow><annotation encoding="application/x-tex">\mathbf{\Psi}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68611em;"></span><span class="strut bottom" style="height:0.68611em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathbf">Ψ</span></span></span></span></span> 表示，如下图<br>
+<img src="/2024/06/04/%E5%9B%BE%E8%AE%BA/%E5%B9%B3%E9%9D%A2%E5%9B%BE%E7%9A%84%E9%9D%A2.png" alt></li>
+<li>面的次数：记为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mi>e</mi><mi>g</mi><mrow><mo fence="true">(</mo><mi>f</mi><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">deg\left(f\right)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">d</span><span class="mord mathit">e</span><span class="mord mathit" style="margin-right:0.03588em;">g</span><span class="minner textstyle uncramped"><span class="style-wrap reset-textstyle textstyle uncramped" style="top:0em;">(</span><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="style-wrap reset-textstyle textstyle uncramped" style="top:0em;">)</span></span></span></span></span> ，表示面f的边界包含的边数，如下图所示<br>
+<img src="/2024/06/04/%E5%9B%BE%E8%AE%BA/%E9%9D%A2%E7%9A%84%E6%AC%A1%E6%95%B0.png" alt></li>
 <li>图的匹配：图中不相邻的边的集合，比如下图中绿色边的集合就是图的匹配<br>
 <img src="/2024/06/04/%E5%9B%BE%E8%AE%BA/%E5%9B%BE%E7%9A%84%E5%8C%B9%E9%85%8D.png" alt></li>
 <li>图的最大匹配：再加上一条边就不能保证是匹配了（会让新加的边与一条旧边相邻）</li>
 <li>图的完美匹配：覆盖了所有顶点的匹配（比如上图中红色边的集合）</li>
 <li>Euler图（欧拉图）：能一笔画的图，要求经过所有的边（比如手机的解锁图案），但可以重复的经过某些点</li>
 <li>Hamilton图（哈密顿图）：</li>
+<li>图的边着色：记为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>χ</mi><mrow><mi mathvariant="normal">′</mi></mrow></msup><mo>(</mo><mi>G</mi><mo>)</mo><mrow><mo>=</mo></mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">\chi^{\prime}(G){=}m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.751892em;"></span><span class="strut bottom" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">χ</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord mathrm">′</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mopen">(</span><span class="mord mathit">G</span><span class="mclose">)</span><span class="mord textstyle uncramped"><span class="mrel">=</span></span><span class="mord mathit">m</span></span></span></span> ，其</li>
+<li>图的点着色：记为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>χ</mi><mo>(</mo><mi>G</mi><mo>)</mo><mrow><mo>=</mo></mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">\chi(G){=}k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">χ</span><span class="mopen">(</span><span class="mord mathit">G</span><span class="mclose">)</span><span class="mord textstyle uncramped"><span class="mrel">=</span></span><span class="mord mathit" style="margin-right:0.03148em;">k</span></span></span></span> ，其中k表示让图每个相邻顶点异色的最小色数</li>
+</ul>
+<h2 id="定理"><a class="markdownIt-Anchor" href="#定理"></a> 定理</h2>
+<ul>
+<li>面的次数定理：</li>
+</ul>
+<blockquote>
+<p>定理：设具有<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">m</span></span></span></span>​ 条边的平面图<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">G</span></span></span></span>​ 的所有面的集合为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">Ψ</mi></mrow><annotation encoding="application/x-tex">\Psi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">Ψ</span></span></span></span>​,则</p>
+</blockquote>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mo>∑</mo><mrow><mi>f</mi><mo>∈</mo><mi mathvariant="normal">Ψ</mi></mrow></msub><mi>deg</mi><mo>(</mo><mi>f</mi><mo>)</mo><mo>=</mo><mn>2</mn><mi>m</mi></mrow><annotation encoding="application/x-tex">\sum_{f\in\Psi}\deg(f)=2m
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.050005em;"></span><span class="strut bottom" style="height:2.488226em;vertical-align:-1.438221em;"></span><span class="base displaystyle textstyle uncramped"><span class="mop op-limits"><span class="vlist"><span style="top:1.202113em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mrel">∈</span><span class="mord mathrm">Ψ</span></span></span></span><span style="top:-0.000005000000000032756em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span><span class="op-symbol large-op mop">∑</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mop">de<span style="margin-right:0.01389em;">g</span></span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathrm">2</span><span class="mord mathit">m</span></span></span></span></span></p>
+<h2 id="问题"><a class="markdownIt-Anchor" href="#问题"></a> 问题</h2>
+<ul>
+<li>面的次数的计算，如下图：<br>
+<img src="/2024/06/04/%E5%9B%BE%E8%AE%BA/%E9%97%AE%E9%A2%981.png" alt></li>
 </ul>
 
     </div>
@@ -230,7 +260,10 @@
     <a href="/2024/05/13/5-13/" rel="prev" title="5.13">
       <i class="fa fa-chevron-left"></i> 5.13
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2024/06/08/ren520/" rel="next" title="ren520">
+      ren520 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -289,7 +322,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%BE%E8%AE%BA"><span class="nav-number">1.</span> <span class="nav-text"> 图论</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5"><span class="nav-number">1.0.0.1.</span> <span class="nav-text"> 概念</span></a></li></ol></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%BE%E8%AE%BA"><span class="nav-number">1.</span> <span class="nav-text"> 图论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.</span> <span class="nav-text"> 概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E7%90%86"><span class="nav-number">1.2.</span> <span class="nav-text"> 定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">1.3.</span> <span class="nav-text"> 问题</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -303,7 +336,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -337,7 +370,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">rainyyyysheeeep</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
 
         
@@ -363,7 +396,7 @@
 <script src="/js/motion.js"></script>
 
 
-<script src="/js/schemes/muse.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
 <script src="/js/next-boot.js"></script>
