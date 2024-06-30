@@ -147,6 +147,436 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/06/13/ICS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="rainyyyysheeeep">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/06/13/ICS/" class="post-title-link" itemprop="url">ICS</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-06-13 20:56:27" itemprop="dateCreated datePublished" datetime="2024-06-13T20:56:27+08:00">2024-06-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-06-30 23:46:26" itemprop="dateModified" datetime="2024-06-30T23:46:26+08:00">2024-06-30</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="ics-114-134"><a class="markdownIt-Anchor" href="#ics-114-134"></a> ICS   114-134</h1>
+<p>进制转化：</p>
+<p>链接</p>
+<p><a target="_blank" rel="noopener" href="http://csapp.cs.cmu.edu/3e/students.html">http://csapp.cs.cmu.edu/3e/students.html</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gcc -Og -o p p1.c p2.c    // -Og 是为了产生和源代码结构相符的机器代码</span><br><span class="line">                          // -o p 指定生成文件为 p</span><br><span class="line">//也可以写为</span><br><span class="line">gcc p1.c p2.c -o p -Og</span><br></pre></td></tr></table></figure>
+<p>对于文件mstore.c</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mstore.c</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">multstore</span><span class="params">(<span class="type">long</span>, <span class="type">long</span>, <span class="type">long</span> *)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">long</span> d;</span><br><span class="line">    multstore(<span class="number">2</span>, <span class="number">3</span>, &amp;d);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;2 * 3 --&gt; %ld\n&quot;</span>, d);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">long</span> <span class="title function_">mult2</span><span class="params">(<span class="type">long</span> a, <span class="type">long</span> b)</span> &#123;</span><br><span class="line">    <span class="type">long</span> s = a * b;</span><br><span class="line">    <span class="keyword">return</span> s;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p>和文件multstore.c</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//multstore.c</span></span><br><span class="line"><span class="type">long</span> <span class="title function_">mult2</span><span class="params">(<span class="type">long</span>, <span class="type">long</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">multstore</span><span class="params">(<span class="type">long</span> x, <span class="type">long</span> y, <span class="type">long</span> *dest)</span> &#123;</span><br><span class="line">    <span class="type">long</span> t = mult2(x, y);</span><br><span class="line">    *dest = t;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>产生汇编代码：（不进行汇编和链接）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">gcc -Og -S mstore.c            // 默认产生mstore.s文件  注意是大写的S！！</span><br><span class="line">gcc -Og -s mstore.c            // 错误，缺少函数multstore()的定义</span><br><span class="line">gcc -Og mstore.c               // 错误，缺少函数multstore()的定义</span><br><span class="line">gcc -s multstore.c mstore.c    // -s默认产生可执行文件a.out   小写的s</span><br><span class="line">gcc multstore.c mstore.c       // 产生a.out效果一样</span><br><span class="line">gcc -Og -c mstore.c            // 产生目标代码文件mstore.o,二进制文件</span><br><span class="line">objdump -d mstore.o            // 反汇编 机器代码-&gt;汇编代码</span><br></pre></td></tr></table></figure>
+<p>产生的部分内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Disassembly of section .text:</span><br><span class="line"></span><br><span class="line">0000000000000000 &lt;main&gt;:</span><br><span class="line">   0:   f3 0f 1e fa             endbr64 </span><br><span class="line">   4:   48 83 ec 18             sub    $0x18,%rsp</span><br><span class="line">   8:   64 48 8b 04 25 28 00    mov    %fs:0x28,%rax</span><br><span class="line">   f:   00 00 </span><br><span class="line">  11:   48 89 44 24 08          mov    %rax,0x8(%rsp)</span><br><span class="line">  16:   31 c0                   xor    %eax,%eax</span><br><span class="line">  18:   48 89 e2                mov    %rsp,%rdx</span><br><span class="line">  1b:   be 03 00 00 00          mov    $0x3,%esi</span><br><span class="line">  20:   bf 02 00 00 00          mov    $0x2,%edi</span><br><span class="line">  25:   e8 00 00 00 00          call   2a &lt;main+0x2a&gt;</span><br><span class="line">  2a:   48 8b 14 24             mov    (%rsp),%rdx</span><br><span class="line">  2e:   48 8d 35 00 00 00 00    lea    0x0(%rip),%rsi        # 35 &lt;main+0x35&gt;</span><br></pre></td></tr></table></figure>
+<table>
+	<tbody>
+		<tr>
+			<th>C 声明</th>
+			<th>Intel 数据类型</th>
+			<th>汇编代码后缀</th>
+			<th>大小(字节)</th>
+		</tr>
+		<tr>
+			<td>char</td>
+			<td>字节</td>
+			<td>b</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>short</td>
+			<td>字</td>
+			<td>w</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>int</td>
+			<td>双字</td>
+			<td>l</td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td>long</td>
+			<td>四字</td>
+			<td>q</td>
+			<td>8</td>
+		</tr>
+		<tr>
+			<td>char</td>
+			<td>四字</td>
+			<td>q</td>
+			<td>8</td>
+		</tr>
+		<tr>
+			<td>float</td>
+			<td>单精度</td>
+			<td>s</td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td>double</td>
+			<td>双精度</td>
+			<td>l</td>
+			<td>8</td>
+		</tr>
+	</tbody>
+</table>
+<p>寄存器类型：<br>
+<img src="/2024/06/13/ICS/%E5%AF%84%E5%AD%98%E5%99%A8%E7%B1%BB%E5%9E%8B.png" alt></p>
+<p>数据传输指令有：</p>
+<table>
+<thead>
+<tr>
+<th>movb(传送字节)</th>
+<th>movw(传送字)</th>
+<th>movl(传送双字)</th>
+<th>movq(传送四字)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>4</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<p>movb(传送字节)	movw(传送字)	movl(传送双字)	movq(传送四字)</p>
+<p><img src="/2024/06/13/ICS/%E5%9C%B0%E5%9D%80%E4%B9%A0%E9%A2%981.png" alt></p>
+<p><img src="/2024/06/13/ICS/%E5%9C%B0%E5%9D%80%E4%B9%A0%E9%A2%982.png" alt></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">%rax 寄存器值 0x100</span><br><span class="line">0x104 地址 0xAB</span><br><span class="line">$0x108 立即数 0x108</span><br><span class="line">(%rax) </span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/06/10/%E7%9F%A9%E9%98%B5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="rainyyyysheeeep">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/06/10/%E7%9F%A9%E9%98%B5/" class="post-title-link" itemprop="url">矩阵</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-06-10 19:55:03" itemprop="dateCreated datePublished" datetime="2024-06-10T19:55:03+08:00">2024-06-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-06-13 20:55:32" itemprop="dateModified" datetime="2024-06-13T20:55:32+08:00">2024-06-13</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li>矩阵的迹: 记为tr(A),为对角线元素之和，有性质tr(AB)=tr(BA),其中 $$A\in\mathbb{R}^{D\times L}\text{ 和 }B\in\mathbb{R}^{L\times D}$$ 可以简单举一个1 * 2和2 * 1的矩阵为例子</li>
+<li>酉矩阵:</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/06/10/%E7%BB%9F%E8%AE%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="rainyyyysheeeep">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/06/10/%E7%BB%9F%E8%AE%A1/" class="post-title-link" itemprop="url">统计</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-06-10 19:42:22" itemprop="dateCreated datePublished" datetime="2024-06-10T19:42:22+08:00">2024-06-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-06-13 20:55:30" itemprop="dateModified" datetime="2024-06-13T20:55:30+08:00">2024-06-13</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li>随机变量的相关性与独立性:</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/06/09/SPSS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="rainyyyysheeeep">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/06/09/SPSS/" class="post-title-link" itemprop="url">SPSS</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-06-09 16:57:53" itemprop="dateCreated datePublished" datetime="2024-06-09T16:57:53+08:00">2024-06-09</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/06/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="rainyyyysheeeep">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/06/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">机器学习</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-06-08 23:46:43" itemprop="dateCreated datePublished" datetime="2024-06-08T23:46:43+08:00">2024-06-08</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-06-10 23:37:47" itemprop="dateModified" datetime="2024-06-10T23:37:47+08:00">2024-06-10</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li>
+<p>KL散度：<br>
+对于离散概率分布 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>Q</mi></mrow><annotation encoding="application/x-tex">Q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">Q</span></span></span></span> ,<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>K</mi><mi>L</mi></mrow><annotation encoding="application/x-tex">KL</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.07153em;">K</span><span class="mord mathit">L</span></span></span></span> 散度定义为：(以 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">e</span></span></span></span> 为底)</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>D</mi><mrow><mi>K</mi><mi>L</mi></mrow></msub><mo>(</mo><mi>P</mi><mo>∥</mo><mi>Q</mi><mo>)</mo><mo>=</mo><msub><mo>∑</mo><mi>x</mi></msub><mi>P</mi><mo>(</mo><mi>x</mi><mo>)</mo><mi>log</mi><mfrac><mrow><mi>P</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mrow><mi>Q</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">D_{KL}(P\parallel Q)=\sum_xP(x)\log\frac{P(x)}{Q(x)}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.427em;"></span><span class="strut bottom" style="height:2.6770050000000003em;vertical-align:-1.250005em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit" style="margin-right:0.07153em;">K</span><span class="mord mathit">L</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mrel">∥</span><span class="mord mathit">Q</span><span class="mclose">)</span><span class="mrel">=</span><span class="mop op-limits"><span class="vlist"><span style="top:1.150005em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">x</span></span></span><span style="top:-0.000005000000000032756em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span><span class="op-symbol large-op mop">∑</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathit">Q</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span><span style="top:-0.2300000000000001em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span></span></p>
+<p>对于连续概率分布 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>Q</mi></mrow><annotation encoding="application/x-tex">Q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">Q</span></span></span></span> ,<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>K</mi><mi>L</mi></mrow><annotation encoding="application/x-tex">KL</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.07153em;">K</span><span class="mord mathit">L</span></span></span></span> 散度定义为：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>D</mi><mrow><mi>K</mi><mi>L</mi></mrow></msub><mo>(</mo><mi>P</mi><mo>∥</mo><mi>Q</mi><mo>)</mo><mo>=</mo><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mi>p</mi><mo>(</mo><mi>x</mi><mo>)</mo><mi>log</mi><mfrac><mrow><mi>p</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mrow><mi>q</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mfrac><mi>d</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">D_{KL}(P\parallel Q)=\int_{-\infty}^\infty p(x)\log\frac{p(x)}{q(x)}dx
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.427em;"></span><span class="strut bottom" style="height:2.397581em;vertical-align:-0.970581em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit" style="margin-right:0.07153em;">K</span><span class="mord mathit">L</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mrel">∥</span><span class="mord mathit">Q</span><span class="mclose">)</span><span class="mrel">=</span><span class="mop"><span class="op-symbol large-op mop" style="margin-right:0.44445em;top:-0.0011249999999999316em;">∫</span><span class="vlist"><span style="top:0.91225em;margin-left:-0.44445em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord">−</span><span class="mord mathrm">∞</span></span></span></span><span style="top:-0.974em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">∞</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord mathit">p</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">q</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span><span style="top:-0.2300000000000001em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathit">p</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mord mathit">d</span><span class="mord mathit">x</span></span></span></span></span></p>
+<p>其中 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span></span></span></span> 表示真实分布, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>Q</mi></mrow><annotation encoding="application/x-tex">Q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">Q</span></span></span></span> 表示模型预测的分布,当 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mo>=</mo><mi>Q</mi></mrow><annotation encoding="application/x-tex">P=Q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mrel">=</span><span class="mord mathit">Q</span></span></span></span> 时效果最好,有非对称性 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>D</mi><mrow><mi>K</mi><mi>L</mi></mrow></msub><mo>(</mo><mi>P</mi><mo>∥</mo><mi>Q</mi><mo>)</mo><mo>≠</mo><msub><mi>D</mi><mrow><mi>K</mi><mi>L</mi></mrow></msub><mo>(</mo><mi>Q</mi><mo>∥</mo><mi>P</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">D_{KL}(P\parallel Q)\neq D_{KL}(Q\parallel P)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit" style="margin-right:0.07153em;">K</span><span class="mord mathit">L</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mrel">∥</span><span class="mord mathit">Q</span><span class="mclose">)</span><span class="mrel">≠</span><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit" style="margin-right:0.07153em;">K</span><span class="mord mathit">L</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mopen">(</span><span class="mord mathit">Q</span><span class="mrel">∥</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mclose">)</span></span></span></span><br>
+比如对于</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mo>=</mo><mo>[</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>1</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>2</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>3</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>4</mn><mo>]</mo></mrow><annotation encoding="application/x-tex">p = [0.1, 0.2, 0.3, 0.4]
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit">p</span><span class="mrel">=</span><span class="mopen">[</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">2</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">3</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">4</span><span class="mclose">]</span></span></span></span></span></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>q</mi><mo>=</mo><mo>[</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>1</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>1</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>7</mn><mo separator="true">,</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>1</mn><mo>]</mo></mrow><annotation encoding="application/x-tex">q = [0.1, 0.1, 0.7, 0.1]
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">q</span><span class="mrel">=</span><span class="mopen">[</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">7</span><span class="mpunct">,</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">1</span><span class="mclose">]</span></span></span></span></span></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>D</mi><mrow><mi>K</mi><mi>L</mi></mrow></msub><mo>(</mo><mi>p</mi><mo>∥</mo><mi>q</mi><mo>)</mo><mo>=</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>1</mn><mi>log</mi><mfrac><mrow><mn>0</mn><mi mathvariant="normal">.</mi><mn>1</mn></mrow><mrow><mn>0</mn><mi mathvariant="normal">.</mi><mn>1</mn></mrow></mfrac><mo>+</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>2</mn><mi>log</mi><mfrac><mrow><mn>0</mn><mi mathvariant="normal">.</mi><mn>2</mn></mrow><mrow><mn>0</mn><mi mathvariant="normal">.</mi><mn>1</mn></mrow></mfrac><mo>+</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>3</mn><mi>log</mi><mfrac><mrow><mn>0</mn><mi mathvariant="normal">.</mi><mn>3</mn></mrow><mrow><mn>0</mn><mi mathvariant="normal">.</mi><mn>7</mn></mrow></mfrac><mo>+</mo><mn>0</mn><mi mathvariant="normal">.</mi><mn>4</mn><mi>log</mi><mfrac><mrow><mn>0</mn><mi mathvariant="normal">.</mi><mn>4</mn></mrow><mrow><mn>0</mn><mi mathvariant="normal">.</mi><mn>1</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">D_{KL}(p\parallel q)=0.1\log\frac{0.1}{0.1}+0.2\log\frac{0.2}{0.1}+0.3\log\frac{0.3}{0.7}+0.4\log\frac{0.4}{0.1}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.32144em;"></span><span class="strut bottom" style="height:2.00744em;vertical-align:-0.686em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">D</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit" style="margin-right:0.07153em;">K</span><span class="mord mathit">L</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mopen">(</span><span class="mord mathit">p</span><span class="mrel">∥</span><span class="mord mathit" style="margin-right:0.03588em;">q</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">1</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">1</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mbin">+</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">2</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">1</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">2</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mbin">+</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">3</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">7</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">3</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mbin">+</span><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">4</span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">1</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm">0</span><span class="mord mathrm">.</span><span class="mord mathrm">4</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span></span></p>
+</li>
+<li></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2024/06/04/%E5%9B%BE%E8%AE%BA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -178,7 +608,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-06-08 22:37:30" itemprop="dateModified" datetime="2024-06-08T22:37:30+08:00">2024-06-08</time>
+                <time title="修改时间：2024-06-08 22:43:03" itemprop="dateModified" datetime="2024-06-08T22:43:03+08:00">2024-06-08</time>
               </span>
 
           
@@ -461,7 +891,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-06-04 21:58:54" itemprop="dateModified" datetime="2024-06-04T21:58:54+08:00">2024-06-04</time>
+                <time title="修改时间：2024-06-09 16:58:15" itemprop="dateModified" datetime="2024-06-09T16:58:15+08:00">2024-06-09</time>
               </span>
 
           
@@ -475,227 +905,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>爬起来把感冒药吃了，幸好去年从家里带过来了一些，还有一些常用的发烧药、腹泻药之类的，它们都被我埋在抽屉深处，我原本以为永远也用不上。<br>
-不知道怎么又开始想家！想念2008年的家。我细细地回忆每一处装潢。在回忆中，那个家出乎意料的大。大大的阳台，椅背上搭着军大衣和棉被的躺椅，宽敞的书桌，灰色花纹的沙发，我仿佛还可以闻到沙发的味道，旧旧的味道。电视柜里堆着各种各样的动画片碟片，还有脏脏的各种充电线，可能是照相机的充电线，也可能是台灯的充电线。我的小床是个靠墙的榻榻米，墙面做了蓝底色，动画花纹的海绵软包，我经常躺在床上，把脚搭在上面，欣赏自己的脚丫。我曾经对妈妈说，我觉得自己的脚丫长得很标致，就像电视广告里的一样。<br>
-小学三年级之后，我有了一个自己的小衣柜，我在里面贴上标签，写着“这里放袜子”“这里放裤子”，衣柜下面有很多小盒子小本子。我以前会用鞋盒子给小洋娃娃做家，这里是床那里是桌子之类的。<br>
-洗漱的池子上放着我、妈妈、爸爸的漱口杯，花纹都是大大的笑脸。有一次停电，妈妈在窗台上放了一支蜡烛，烧掉了一小块纱窗，后来也没修，贴了一块胶布。大大的镜子对面有一根杆子，用来挂毛巾，我以前长得矮，都得踩凳子才能挂上。<br>
-我家住在义峰山公园旁边，洗漱间是听广场舞音乐最清楚的地方。小学的时候我都严格遵守八点半之前睡觉，每天都伴着音乐入睡，什么时兴就听什么，睡得也很香。我还记得小学有一次写作文，我的题目是“我家的后花园”，写的就是义峰山，隔壁的讨厌男生看见我的题目，皱着眉头问我，你家还有后花园？<br>
-妈妈爸爸的房间有大大的床，我每周六早上都会跑到他们床上，钻到他们中间睡回笼觉。小学六年级，妈妈流产了一次，我坐在床边问妈妈，怎么回事？怎么就摔跤了？爸爸叫我别问了一边去。但是我是真想知道怎么搞的，因为那天我一起床跑到他们房间，妈妈就端着一杯红糖水坐在床头哭了。我也很喜欢把他们的床当成蹦蹦床，对着窗户蹦蹦蹦，对着空调吹冷风。<br>
-他们房间还放了一张电脑桌，我爸有时候会在电脑上玩消消乐，或者找不同，我坐在床头就能看出来要点哪里，他们就会惊叹，崽崽眼睛真好！真聪明！<br>
-爸妈房间连着阳台，我在阳台的书桌上画画练字写作业。小时候我爸妈吵架，我画过一幅画，左边是爸爸妈妈美好的婚礼，妈妈手里还拿着我（当时我的画技还画不出抱着，以及我也不知道婚礼上为什么会有我）右边就是婚后他们吵架，还有大大的文字框，里面写着我经常听到他们吵架的内容。婚姻是多么可怕！后来我们又把那幅画翻出来，我和妈妈笑得不行。早熟的小女孩～<br>
-厨房也很好。厨房的冰箱里有我用来招待好朋友的可爱多。我们的餐桌垫着蓝白格子的桌布，上面压着一大块玻璃。有次我学着爸妈的样子用筷子把桌上的残渣往碗里扫，结果弄脏了桌布，被骂了一顿，自作聪明的小女孩～<br>
-厨房连着晒衣服的小阳台，小阳台和我的房间隔着一扇窗户，有一次爸爸在小阳台抽烟发现我趴在床上看书，告诉了妈妈。当时我以为天都要塌了！趴着看书，对眼睛多不好，是多么严重的一个错误！<br>
-好多我都已经记不清了，比如说我不记得进门的鞋柜上面放了些什么，不记得电视柜的玻璃门具体长什么样子。但是我写着写着想起来，鞋柜有一个小抽屉放着各种钥匙，电视柜里有一个笔筒里面放着各种面值的硬币，甚至还有一分钱的纸笔。<br>
-我真的很害怕我会把那里忘记，那里有我完整的童年。如果我不记得，爸妈也不记得，就没人会记得了，我也不知道还有没有照片留存。2018（？）年公园要扩建，那里就拆迁了，先是变成废墟，后来就变成新的公园了。<br>
-然后我们从山边搬到了河边，新家仍然有人跳广场舞，但是更多的是装修。新家有两个卫生间，甚至有一间客房。后来弟弟出生了，外婆来照顾他，我和外婆不太合得来，我要求她进我的房间要敲门。我们的关系到现在都很尴尬。<br>
-我们家只在河边住了两年，就搬到了现在的家。我和弟弟都远离了我们出生的地方。<br>
-我很想家！我想念我小小的床！想念院子里的朋友！想念可爱多和旺仔牛奶！我想念那个安静的小女孩！<br>
-现在我要睡觉了，晚安！<br>
-于23年12月23日深夜</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/18/%E6%81%8B%E7%88%B1%E6%97%A5%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="rainyyyysheeeep">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/04/18/%E6%81%8B%E7%88%B1%E6%97%A5%E8%AE%B0/" class="post-title-link" itemprop="url">恋爱日记</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-04-18 17:39:48" itemprop="dateCreated datePublished" datetime="2024-04-18T17:39:48+08:00">2024-04-18</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-06-04 21:58:59" itemprop="dateModified" datetime="2024-06-04T21:58:59+08:00">2024-06-04</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>小任的小小心事</p>
+          <p>爬起来把感冒药吃了，幸好去年从家里带过来了一些，还有一些常用的发烧药、腹泻药之类的，它们都被我埋在抽屉深处，我原本以为永远也用不上。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2024/04/18/%E6%81%8B%E7%88%B1%E6%97%A5%E8%AE%B0/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/18/1day/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="rainyyyysheeeep">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/04/18/1day/" class="post-title-link" itemprop="url">1day</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-04-18 16:56:21" itemprop="dateCreated datePublished" datetime="2024-04-18T16:56:21+08:00">2024-04-18</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-06-04 21:59:16" itemprop="dateModified" datetime="2024-06-04T21:59:16+08:00">2024-06-04</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/17/mylove/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="rainyyyysheeeep">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/04/17/mylove/" class="post-title-link" itemprop="url">mylove</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-04-17 21:50:44" itemprop="dateCreated datePublished" datetime="2024-04-17T21:50:44+08:00">2024-04-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-06-04 21:58:52" itemprop="dateModified" datetime="2024-06-04T21:58:52+08:00">2024-06-04</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          Here's something encrypted, password is required to continue reading.
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/04/17/mylove/#more" rel="contents">
+              <a class="btn" href="/2024/04/18/%E5%B0%8F%E4%BB%BB%E7%9A%84%E5%B0%8F%E8%AF%B4/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -717,6 +930,9 @@
 
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
 
 
 
@@ -781,7 +997,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
